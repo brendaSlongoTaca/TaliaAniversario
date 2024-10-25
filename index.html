@@ -56,6 +56,20 @@
             max-height: 250px;
             border-radius: 8px;
         }
+
+        .play-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #2ec700;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.8);
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
     </style>
 </head>
 <body>
@@ -67,12 +81,25 @@
             <br><br>
             Espero que goste!
         </h2>    
-        <br>
-        <h4 style="font-family: Georgia, 'Times New Roman', Times, serif;">
-            Música tocando: Never Be Alone - Shawn Mendes
-        </h4>
+        <br><br><br>
+
+        <p style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 20px;">
+            Never Be Alone - Shawn Mendes
+            <br>
+            <button class="play-button" onclick="playMusic()">Clique para ouvir</button>
+        </p>
+        <br><br><br>
+
     </center>
     
+    <script>
+        var audio = new Audio("audio/never_be_alone.mp3");
+
+        function playMusic() {
+            audio.play();
+        }
+    </script>
+
     <div class="gallery">
         <div class="gallery-item">
             <iframe width="560" height="315" 
@@ -254,12 +281,5 @@
             <img src="img/Screenshot_20210302-181727.jpg">
         </div>
 
-
-        <script>
-            var audio = new Audio("https://github.com/brendaSlongoTaca/Audios/raw/main/never_be_alone.mp3");
-            audio.play();
-        </script>
-
-    </div>
 </body>
 </html>
